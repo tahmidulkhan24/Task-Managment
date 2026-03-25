@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Task App</title>
+</head>
+
+<body class="p-6 font-mono bg-gray-100">
+
+<div class="max-w-[1200px] mx-auto px-4">
+
+    <!-- Header -->
+    <header class="flex justify-between items-center mb-6">
+        <h1 class="font-bold text-xl">Dashboard</h1>
+
+        <div class="flex items-center gap-4">
+            <!-- Notification -->
+            <button class="hover:bg-gray-200 p-2 rounded transition">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
+                     viewBox="0 0 24 24" stroke-width="1.5" 
+                     stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0">
+                    </path>
+                </svg>
+            </button>
+
+            <!-- Profile -->
+            <button class="bg-white text-blue-600 px-3 py-1 rounded hover:bg-blue-500 hover:text-white transition">
+                B
+            </button>
+        </div>
+    </header>
+
+    <!-- Cards -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+
+        <!-- Reusable Card -->
+        <div class="bg-white rounded-lg p-4 shadow">
+            <h3 class="text-gray-500 text-sm">Total Task</h3>
+            <div class="flex justify-between items-center mt-2">
+                <div>
+                    <p class="text-3xl font-bold">3</p>
+                    <p class="text-sm text-gray-400">111 last month</p>
+                </div>
+
+                <div class="bg-blue-100 p-3 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6 text-blue-600">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Just duplicate this card instead of messy copy -->
+        <div class="bg-white rounded-lg p-4 shadow"></div>
+        <div class="bg-white rounded-lg p-4 shadow"></div>
+        <div class="bg-white rounded-lg p-4 shadow"></div>
+
+    </section>
+
+    <!-- Table -->
+    <section class="bg-white rounded-xl shadow overflow-hidden">
+
+        <!-- Header -->
+        <div class="grid grid-cols-4 p-3 bg-gray-50 text-sm text-gray-500 font-medium">
+            <div>Task</div>
+            <div>Status</div>
+            <div>Date</div>
+            <div>Action</div>
+        </div>
+
+        <!-- Rows -->
+        <div class="divide-y">
+
+            <div class="grid grid-cols-4 p-3 items-center">
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                    Test Low Task
+                </div>
+                <div>Pending</div>
+                <div>Today</div>
+                <div>View</div>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>

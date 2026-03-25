@@ -2,7 +2,15 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
-def home(request):
-    return HttpResponse("<h1 style='color:red'>welcome</h1>")
-def contact(request):
-    return HttpResponse("this is a num:01609109108")
+
+def manager_dashboard(request):
+    return render(request, "manager_dashboard.html")
+
+def user_dashboard(request):
+    return render(request,"user_dashboard.html")
+def test(request):
+    context={
+        "name":['labib','khan','tk'],
+        "age":23
+    }
+    return render(request,"test.html",context)
