@@ -1,0 +1,72 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static "css/output.css" %}">
+
+    <title>Task Form</title>
+</head>
+
+  <body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="w-full max-w-md p-8 bg-white shadow-lg rounded-xl">
+      <!-- ✅ Messages -->
+      {% if messages %}
+        {% for message in messages %}
+          <div class="fixed p-3 text-green-800 bg-green-200 rounded shadow-lg top-5 right-5">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+      <h2 class="mb-4 text-xl font-bold text-center">Add Task</h2>
+
+      <!-- ✅ FORM -->
+      <form method="POST">
+        {% csrf_token %}
+
+        <!-- Project -->
+        <div>
+          <label class="block mb-1 font-medium">Project</label>
+          {{ form.project }}
+        </div>
+
+        <!-- Title -->
+        <div>
+          <labelc>Title</labelc>
+          {{ form.title }}
+        </div>
+
+        <!-- Description -->
+        <div>
+          <label class="block mb-1 font-medium">Description</label>
+          {{ form.description }}
+        </div>
+
+        <!-- Due Date -->
+        <div>
+          <label class="block mb-1 font-medium">Due Date</label>
+          {{ form.due_date }}
+        </div>
+
+        <!-- Completed -->
+        <div class="flex items-center gap-2">
+          {{ form.is_completed }}
+          <label>Completed</label>
+        </div>
+
+        <!-- Assigned -->
+        <div>
+          <label class="block mb-1 font-medium">Assigned To</label>
+          {{ form.assigned_to }}
+        </div>
+
+        <button
+          type="submit"
+          class="w-full py-2 mt-4 text-white bg-blue-500 rounded hover:bg-blue-600"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
